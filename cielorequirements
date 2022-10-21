@@ -1,0 +1,57 @@
+
+Remove Tech Support Tickets from Customer Dashboard
+
+
+Add Notes (for Tech support tickets)
+
+
+
+Move whole project to EST Timezone
+
+Move the ticket from Tech support to Warranty Claim, (don't copy just move aka re-assign to Warranty Claim)
+
+
+WareHouse Team (Part Availability, cost of product
+
+
+
+----------------------------------------
+
+for Creating Ticket, Show Brand, then Item # and autofill Unit, Item Type while creating Ticket
+
+
+When seeing View Files from warranty Claim, Show Image in a Zoom In/Out format and validate while uploading from customer side as well.
+
+In Warehouse Dashboard Remove Pictures and move things on new Vue Template
+
+Show Detail of ticket in Detail Page
+
+Replacement, Refund show Pictures which Customer provided 
+
+
+
+http://curtisint.webnappservices.com/tickets/set-refund/11
+
+When Refund Department Mark the ticket as Cheque Shipped it will close the ticket
+
+
+http://127.0.0.1:8000/tickets/set-repair/29
+
+if Repaired allow a file upload 
+
+When Repaired Mark this ticket as closed
+
+
+Not Repaired - Flow back to resourcing/warranty
+
+
+http://127.0.0.1:8000/tickets/view-files/23
+
+Warranty Claim / if user is from US disable the whole Repair Section
+
+
+------------------------------------
+
+
+curtis-edes1
+k4Vq3UGc

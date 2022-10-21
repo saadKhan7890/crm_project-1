@@ -1,0 +1,46 @@
+Upload this sheet
+
+https://docs.google.com/spreadsheets/d/11tds5mFC_AFWpSjVso01SWCLQ99gbCS0shJP6jr7Hb0/edit#gid=1880039227 (Warranty Cost Sheet)
+
+
+Chat Bot - Single Site Only So no need to differentiate Chat Bot / Web forms according to multiple sites
+
+
+https://docs.google.com/spreadsheets/d/1XVSR5a4rxQywctaCLEPSquRA-Bqr3oloDSP12edwxGA/edit#gid=0 - Model# is Item Number from here (https://docs.google.com/spreadsheets/d/11tds5mFC_AFWpSjVso01SWCLQ99gbCS0shJP6jr7Hb0/edit#gid=1880039227)
+
+https://docs.google.com/spreadsheets/d/1XVSR5a4rxQywctaCLEPSquRA-Bqr3oloDSP12edwxGA/edit#gid=0 - Product Type is Item Type here (https://docs.google.com/spreadsheets/d/11tds5mFC_AFWpSjVso01SWCLQ99gbCS0shJP6jr7Hb0/edit#gid=1880039227)
+
+https://docs.google.com/spreadsheets/d/1XVSR5a4rxQywctaCLEPSquRA-Bqr3oloDSP12edwxGA/edit#gid=0 - Issue is Common Concerns which will be handled by Super Admin, But Agents/Managers Can Write Custom as well
+
+
+
+---------------------------
+
+If Agent selects Warranty Claim it will send a template to Customer
+
+If Agent selects Parts it will send a template to Customer
+
+Tech Support - Email will be sent to customer (if email is provided)
+
+
+Tech Support Ticket number prefix (TS)
+Warranty Claim Ticket number prefix (CF)
+Parts Team number prefix (PTS)
+
+Parts Team
+
+---------------------------
+
+
+22-Sep-2022
+
+Bulk Uploading Common Issues doesn't require item Type / Item class, we just have to upload issues with proper grouping like client provided
+
+for product sheet - Brand should be ID, and Item Type should be ID as well 
+
+Make sure to allow export on brands listing, item type listing and every other listing as well (export should be in excel not csv)
+
+---------------------------
+
+
+
