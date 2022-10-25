@@ -6,7 +6,7 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <title>Curtis INT CRM</title>
+    <title>AU Account</title>
 </head>
 
 <body id="main">
@@ -25,7 +25,7 @@
         <notifications :notificaitontext="notificaitontext" :notificaitonstatus="notificaitonstatus" />
     </div>
     <script src="/js/app.js"></script>
-    <script src="/chat/chat-frame.js"></script>
+    {{-- <script src="/chat/chat-frame.js"></script> --}}
 
 
 </body>

@@ -2094,7 +2094,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _sidemenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidemenu.vue */ "./resources/js/components/sidebars/sidemenu.vue");
-/* harmony import */ var _services_auth_otherrequests__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @services/auth/otherrequests */ "./resources/js/services/auth/otherrequests.js");
+/* harmony import */ var _rightsidemenu_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./rightsidemenu.vue */ "./resources/js/components/sidebars/rightsidemenu.vue");
+/* harmony import */ var _services_auth_otherrequests__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @services/auth/otherrequests */ "./resources/js/services/auth/otherrequests.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2150,13 +2151,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "sidebar",
   props: ["showsidebar"],
   components: {
-    sidemenu: _sidemenu_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    sidemenu: _sidemenu_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    rightsidemenu: _rightsidemenu_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
@@ -2166,15 +2187,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       overlay: false,
       opacity: 0.7,
       collapseOnScroll: true,
-      items: [// { title: '+ Permission', link: 'auth.permissions.add', permission_id: 62 },
-        // { title: '+ Role', link: 'auth.roles.add', permission_id: 57 },
-        // { title: '+ User', link: 'auth.users.add', permission_id: 2 },
-        // { title: '+ Brand', link: 'auth.brands.add', permission_id: 119 },
-        // { title: '+ Email Template', link: 'auth.emailtemplates.add', permission_id: 150 },
-        // { title: '+ Item Type', link: 'auth.itemtypes.add', permission_id: 125 },
-        // { title: '+ Common Issue', link: 'auth.commonissues.add', permission_id: 130 },
-        // { title: '+ Product', link: 'auth.products.add', permission_id: 135 },
-        // { title: '+ Ticket', link: 'auth.tickets.add', permission_id: 145 },
+      extended: true,
+      items: [{
+        title: 'Logout',
+        icon: "mdi-logout",
+        action: "logout"
+      } // { title: '+ Permission', link: 'auth.permissions.add', permission_id: 62 },
+      // { title: '+ Role', link: 'auth.roles.add', permission_id: 57 },
+      // { title: '+ User', link: 'auth.users.add', permission_id: 2 },
+      // { title: '+ Brand', link: 'auth.brands.add', permission_id: 119 },
+      // { title: '+ Email Template', link: 'auth.emailtemplates.add', permission_id: 150 },
+      // { title: '+ Item Type', link: 'auth.itemtypes.add', permission_id: 125 },
+      // { title: '+ Common Issue', link: 'auth.commonissues.add', permission_id: 130 },
+      // { title: '+ Product', link: 'auth.products.add', permission_id: 135 },
+      // { title: '+ Ticket', link: 'auth.tickets.add', permission_id: 145 },
       ]
     };
   },
@@ -2214,13 +2240,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    logoutauthparent: function logoutauthparent() {
-      this.$store.commit("setLoginStatus", false);
-      this.$store.commit("setAuthToken", "");
-      this.$store.commit("setloggedInUser", {});
-      this.$router.push({
-        name: "auth.login"
-      });
+    logoutauthparent: function logoutauthparent(action) {
+      if (action === "logout") {
+        this.$store.commit("setLoginStatus", false);
+        this.$store.commit("setAuthToken", "");
+        this.$store.commit("setloggedInUser", {});
+        this.$router.push({
+          name: "auth.login"
+        });
+      }
     }
   },
   computed: {
@@ -2286,6 +2314,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/rightsidemenu.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/rightsidemenu.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "rightsidemenu"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/sidemenu.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/sidemenu.vue?vue&type=script&lang=js& ***!
@@ -2338,32 +2396,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2372,6 +2404,56 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         title: 'Dashboard',
         icon: 'mdi-view-dashboard',
         link: 'auth.dashboard'
+      }, {
+        title: 'Customers',
+        icon: 'mdi-alpha-p',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Suppliers',
+        icon: 'mdi-shape-circle-plus',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Datacenters',
+        icon: 'mdi-account-multiple-plus-outline',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Sucbscriptions',
+        icon: 'mdi-watermark',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Employees',
+        icon: 'mdi-ticket',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Switches',
+        icon: 'mdi-sitemap',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Overheads',
+        icon: 'mdi-alert-circle-outline',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Comissions',
+        icon: 'mdi-view-dashboard',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Debts/Loans',
+        icon: 'mdi-account-multiple-plus-outline',
+        link: 'auth.dashboard',
+        permission_id: 0
+      }, {
+        title: 'Wallets',
+        icon: 'mdi-ticket',
+        link: 'auth.dashboard',
+        permission_id: 0
       } // { title: 'Permissions', icon: 'mdi-alpha-p', link: 'auth.permissions.listing', permission_id: 61 },
       // { title: 'Roles', icon: 'mdi-shape-circle-plus', link: 'auth.roles.listing', permission_id: 56 },
       // { title: 'Users', icon: 'mdi-account-multiple-plus-outline', link: 'auth.users.listing', permission_id: 1 },
@@ -21856,6 +21938,45 @@ component.options.__file = "resources/js/components/sidebars/notifications.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/sidebars/rightsidemenu.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/components/sidebars/rightsidemenu.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _rightsidemenu_vue_vue_type_template_id_50e51636_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true& */ "./resources/js/components/sidebars/rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true&");
+/* harmony import */ var _rightsidemenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rightsidemenu.vue?vue&type=script&lang=js& */ "./resources/js/components/sidebars/rightsidemenu.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _rightsidemenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _rightsidemenu_vue_vue_type_template_id_50e51636_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _rightsidemenu_vue_vue_type_template_id_50e51636_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "50e51636",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/sidebars/rightsidemenu.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/sidebars/sidemenu.vue":
 /*!*******************************************************!*\
   !*** ./resources/js/components/sidebars/sidemenu.vue ***!
@@ -21927,6 +22048,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/sidebars/rightsidemenu.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/sidebars/rightsidemenu.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_rightsidemenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./rightsidemenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/rightsidemenu.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_rightsidemenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/sidebars/sidemenu.vue?vue&type=script&lang=js&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/sidebars/sidemenu.vue?vue&type=script&lang=js& ***!
@@ -21977,6 +22114,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/sidebars/rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/sidebars/rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true& ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_rightsidemenu_vue_vue_type_template_id_50e51636_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_rightsidemenu_vue_vue_type_template_id_50e51636_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_rightsidemenu_vue_vue_type_template_id_50e51636_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/sidebars/sidemenu.vue?vue&type=template&id=1e53c01a&":
 /*!**************************************************************************************!*\
   !*** ./resources/js/components/sidebars/sidemenu.vue?vue&type=template&id=1e53c01a& ***!
@@ -22023,7 +22177,151 @@ var render = function () {
                 color: "primary",
                 dense: "",
                 dark: "",
+                prominent: "",
+                absolute: "",
               },
+              scopedSlots: _vm._u(
+                [
+                  {
+                    key: "extension",
+                    fn: function () {
+                      return [
+                        _c("div", { staticClass: "SearchAndButton" }, [
+                          _c(
+                            "div",
+                            { staticClass: "d-flex flex-column float-end" },
+                            [
+                              _c(
+                                "v-row",
+                                { staticClass: "pr-2" },
+                                [
+                                  _c(
+                                    "v-responsive",
+                                    { attrs: { "max-width": "260" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          dense: "",
+                                          flat: "",
+                                          "hide-details": "",
+                                          rounded: "",
+                                          "solo-inverted": "",
+                                          placeholder: "Search",
+                                          "prepend-icon": "cmdi-magnify",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("br"),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "d-flex flex-column mb-12" },
+                            [
+                              _c(
+                                "v-row",
+                                {
+                                  attrs: { align: "center", justify: "center" },
+                                },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        depressed: "",
+                                        color: "primary",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            Revenue\n                        "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        depressed: "",
+                                        color: "primary",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            Suppliers Usage\n                        "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        depressed: "",
+                                        color: "primary",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            Datacenters\n                        "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        depressed: "",
+                                        color: "primary",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            Comissions\n                        "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        depressed: "",
+                                        color: "primary",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            P&L\n                        "
+                                      ),
+                                    ]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ]),
+                      ]
+                    },
+                    proxy: true,
+                  },
+                ],
+                null,
+                false,
+                213689399
+              ),
             },
             [
               _c("v-app-bar-nav-icon", {
@@ -22034,9 +22332,25 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("v-toolbar-title", [_vm._v("CRM")]),
+              _c("v-toolbar-title", [_vm._v("AU Account")]),
               _vm._v(" "),
               _c("v-spacer"),
+              _vm._v(" "),
+              _c("v-btn", { attrs: { depressed: "", color: "primary" } }, [
+                _vm._v("\n            Paypal\n        "),
+              ]),
+              _vm._v(" "),
+              _c("v-btn", { attrs: { depressed: "", color: "primary" } }, [
+                _vm._v("\n            US Mercury\n        "),
+              ]),
+              _vm._v(" "),
+              _c("v-btn", { attrs: { depressed: "", color: "primary" } }, [
+                _vm._v("\n            UBL AU\n        "),
+              ]),
+              _vm._v(" "),
+              _c("v-btn", { attrs: { depressed: "", color: "primary" } }, [
+                _vm._v("\n            Others\n        "),
+              ]),
               _vm._v(" "),
               _c(
                 "v-menu",
@@ -22077,48 +22391,22 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "v-list",
-                    [
-                      _vm._l(_vm.items, function (item, itemKey) {
-                        return _c(
-                          "v-list-item",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value:
-                                  _vm.permissions.indexOf(item.permission_id) >=
-                                  0,
-                                expression:
-                                  "permissions.indexOf(item.permission_id) >= 0",
-                              },
-                            ],
-                            key: itemKey,
-                            attrs: { link: "", to: { name: item.link } },
-                          },
-                          [
-                            _c("v-list-item-title", [
-                              _vm._v(_vm._s(item.title)),
-                            ]),
-                          ],
-                          1
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "v-btn",
+                    _vm._l(_vm.items, function (item, itemKey) {
+                      return _c(
+                        "v-list-item",
                         {
-                          attrs: { block: "", color: "primary" },
-                          on: { click: _vm.logoutauthparent },
+                          key: itemKey,
+                          on: {
+                            click: function ($event) {
+                              return _vm.logoutauthparent(item.action)
+                            },
+                          },
                         },
-                        [
-                          _vm._v(
-                            "\n                    Logout\n                "
-                          ),
-                        ]
-                      ),
-                    ],
-                    2
+                        [_c("v-list-item-title", [_vm._v(_vm._s(item.title))])],
+                        1
+                      )
+                    }),
+                    1
                   ),
                 ],
                 1
@@ -22132,57 +22420,7 @@ var render = function () {
             on: { updateDrawer: _vm.updateDrawer },
           }),
           _vm._v(" "),
-          _c(
-            "v-overlay",
-            { attrs: { opacity: _vm.opacity, value: _vm.overlay } },
-            [
-              _c(
-                "v-container",
-                [
-                  _c("v-text-field", {
-                    attrs: { label: "Seral Number" },
-                    model: {
-                      value: _vm.serialNumber,
-                      callback: function ($$v) {
-                        _vm.serialNumber = $$v
-                      },
-                      expression: "serialNumber",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "white--text",
-                      attrs: { color: "danger" },
-                      on: {
-                        click: function ($event) {
-                          _vm.overlay = false
-                        },
-                      },
-                    },
-                    [_vm._v("\n                Close\n            ")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "white--text",
-                      attrs: {
-                        loading: _vm.lookupSerialSearch,
-                        disabled: _vm.lookupSerialSearch,
-                        color: "teal",
-                      },
-                      on: { click: _vm.requestLookup },
-                    },
-                    [_vm._v("\n                Search Now\n            ")]
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
+          _c("rightsidemenu", { staticClass: "rightsidemenu" }),
         ],
         1
       )
@@ -22259,6 +22497,47 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/rightsidemenu.vue?vue&type=template&id=50e51636&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("v-card", { staticClass: "mycard" }, [
+        _vm._v("\n        First Box\n    "),
+      ]),
+      _vm._v(" "),
+      _c("v-card", { staticClass: "mycard" }, [
+        _vm._v("\n        Second Box\n    "),
+      ]),
+      _vm._v(" "),
+      _c("v-card", { staticClass: "mycard" }, [
+        _vm._v("\n        Third Box\n    "),
+      ]),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/sidemenu.vue?vue&type=template&id=1e53c01a&":
 /*!*****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/sidebars/sidemenu.vue?vue&type=template&id=1e53c01a& ***!
@@ -22306,7 +22585,7 @@ var render = function () {
             "v-list-item",
             {
               staticClass: "px-2",
-              attrs: { link: "", to: { name: "auth.profile" } },
+              attrs: { "link:to": "{ name: 'auth.profile' }" },
             },
             [
               _c(
@@ -22356,32 +22635,6 @@ var render = function () {
               1
             )
           }),
-          _vm._v(" "),
-          _c(
-            "v-list-item",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.permissions.find(function (permission) {
-                    return [139, 140, 141, 142].indexOf(permission) >= 0
-                  }),
-                  expression:
-                    "permissions.find((permission)=>{\n            return [139, 140, 141, 142].indexOf(permission)>=0\n        })",
-                },
-              ],
-              attrs: { link: "", to: { name: "auth.exports" } },
-            },
-            [
-              _c(
-                "v-list-item-icon",
-                [_c("v-icon", [_vm._v("mdi-file-export")])],
-                1
-              ),
-            ],
-            1
-          ),
           _vm._v(" "),
           _c("v-divider"),
           _vm._v(" "),

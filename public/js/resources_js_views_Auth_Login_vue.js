@@ -304,7 +304,7 @@ var render = function () {
           _c("v-col", { staticClass: "text-center align-content-center" }, [
             _c("p", [_vm._v("Welcome to,")]),
             _vm._v(" "),
-            _c("h1", [_vm._v("Curtis INT CRM")]),
+            _c("h1", [_vm._v("AU Account")]),
           ]),
         ],
         1

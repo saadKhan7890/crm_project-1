@@ -1,42 +1,20 @@
 <template>
     <v-navigation-drawer @input="updateDrawer" v-model="drawer" absolute temporary>
         <v-list dense nav>
-            <v-list-item
-                class="px-2"
-                link
-                :to="{ name: 'auth.profile' }"
-            >
+            <v-list-item class="px-2" link:to="{ name: 'auth.profile' }" >
                 <v-list-item-avatar>
                     <v-img :src="user.image_url"></v-img>
                 </v-list-item-avatar>
-
                 <v-list-item-title>{{ user.name }}</v-list-item-title>
-
-                <!-- <v-btn icon @click.stop="mini = !mini">
-                    <v-icon>mdi-chevron-left</v-icon>
-                </v-btn> -->
             </v-list-item>
-
             <v-divider></v-divider>
             <v-list-item v-for="item in items" :key="item.title" link :to="{ name: item.link }" v-show="item.permission_id?permissions.indexOf(item.permission_id) >= 0:true">
                 <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
                 </v-list-item-icon>
-
                 <v-list-item-content>
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
-            </v-list-item>
-            <v-list-item link :to="{ name: 'auth.exports' }" v-show="permissions.find((permission)=>{
-                return [139, 140, 141, 142].indexOf(permission)>=0
-            })">
-                <v-list-item-icon>
-                    <v-icon>mdi-file-export</v-icon>
-                </v-list-item-icon>
-
-                <!-- <v-list-item-content>
-                    <v-list-item-title>Exports Management</v-list-item-title>
-                </v-list-item-content> -->
             </v-list-item>
             <v-divider></v-divider>
             <v-list-item class="px-2">
@@ -49,11 +27,7 @@
             </v-list-item>
         </v-list>
         <template v-slot:append>
-            <!-- <div class="pa-2">
-                <v-btn  @click="logoutauthparent" block color="primary">
-                    Logout
-                </v-btn>
-            </div> -->
+
         </template>
     </v-navigation-drawer>
 </template>
@@ -63,6 +37,16 @@ export default {
         isNightMode: false,
         items: [
             { title: 'Dashboard', icon: 'mdi-view-dashboard', link: 'auth.dashboard' },
+            { title: 'Customers', icon: 'mdi-alpha-p', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Suppliers', icon: 'mdi-shape-circle-plus', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Datacenters', icon: 'mdi-account-multiple-plus-outline', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Sucbscriptions', icon: 'mdi-watermark', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Employees', icon: 'mdi-ticket', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Switches', icon: 'mdi-sitemap', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Overheads', icon: 'mdi-alert-circle-outline', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Comissions', icon: 'mdi-view-dashboard', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Debts/Loans', icon: 'mdi-account-multiple-plus-outline', link: 'auth.dashboard' , permission_id: 0 },
+            { title: 'Wallets', icon: 'mdi-ticket', link: 'auth.dashboard' , permission_id: 0 },
             // { title: 'Permissions', icon: 'mdi-alpha-p', link: 'auth.permissions.listing', permission_id: 61 },
             // { title: 'Roles', icon: 'mdi-shape-circle-plus', link: 'auth.roles.listing', permission_id: 56 },
             // { title: 'Users', icon: 'mdi-account-multiple-plus-outline', link: 'auth.users.listing', permission_id: 1 },

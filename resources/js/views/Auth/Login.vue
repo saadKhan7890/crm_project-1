@@ -3,7 +3,7 @@
 		<v-row no-gutters class="pa-10">
 			<v-col class="text-center align-content-center">
 				<p>Welcome to,</p>
-				<h1>Curtis INT CRM</h1>
+				<h1>AU Account</h1>
 			</v-col>
 		</v-row>
 
