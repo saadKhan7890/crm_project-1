@@ -17,4 +17,10 @@ export default {
 }
 </script>
 <style scoped>
+.mycard.v-card.v-sheet.theme--light {
+    width: 100%;
+    height: 30%;
+    padding: 10px 10px;
+    margin: 9px 16px;
+}
 </style>

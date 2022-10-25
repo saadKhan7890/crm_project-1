@@ -61,7 +61,7 @@
             </template>
         </v-app-bar>
         <sidemenu :drawer="drawer" @updateDrawer="updateDrawer" />
-        <rightsidemenu class="rightsidemenu"/>
+        <rightsidemenu class="rightsidemenu" :drawer="drawer" @updateDrawer="updateDrawer"/>
 
     </div>
 </template>
@@ -138,5 +138,26 @@ export default {
 };
 </script>
 <style>
+.rightsidemenu {
+    float: right;
+    width: 17%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 145px 0px 0px 0;
+}
 
+.search {
+    float: right;
+}
+
+.v-toolbar__extension {
+    height: auto;
+}
+
+.SearchAndButton {
+    width: 100%;
+}
 </style>
